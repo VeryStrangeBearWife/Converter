@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1616969961_53-p-stilnii-fon-57" translatesAutoresizingMaskIntoConstraints="NO" id="c6P-B8-7mr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-SZ-anH">
+                                <rect key="frame" x="86" y="113" width="242" height="45"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruI-hj-k4Z">
+                                <rect key="frame" x="178" y="371" width="58" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ag1-j1-brW">
+                                <rect key="frame" x="90" y="433" width="235" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ihp-fc-qSi"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsJ-Dh-GOf">
+                                <rect key="frame" x="171" y="483" width="72" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fsJ-Dh-GOf" firstAttribute="top" secondItem="ag1-j1-brW" secondAttribute="bottom" constant="20" id="5di-EV-tY5"/>
+                            <constraint firstItem="ag1-j1-brW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="FJe-tU-mhv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c6P-B8-7mr" secondAttribute="trailing" id="GaE-QU-Upo"/>
+                            <constraint firstItem="ruI-hj-k4Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LG2-Ki-Oi8"/>
+                            <constraint firstItem="ag1-j1-brW" firstAttribute="centerY" secondItem="c6P-B8-7mr" secondAttribute="centerY" id="MSk-cr-Exo"/>
+                            <constraint firstItem="ZNe-SZ-anH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="MfO-V2-X21"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="c6P-B8-7mr" secondAttribute="top" constant="44" id="bfm-CT-kZb"/>
+                            <constraint firstItem="ruI-hj-k4Z" firstAttribute="centerX" secondItem="ag1-j1-brW" secondAttribute="centerX" id="bmf-4D-8Yl"/>
+                            <constraint firstItem="ZNe-SZ-anH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kpd-0h-w77"/>
+                            <constraint firstItem="ag1-j1-brW" firstAttribute="top" secondItem="ruI-hj-k4Z" secondAttribute="bottom" constant="20" id="lB6-zI-2MT"/>
+                            <constraint firstItem="c6P-B8-7mr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oHW-at-7Sd"/>
+                            <constraint firstItem="c6P-B8-7mr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="u92-oR-GcJ"/>
+                            <constraint firstItem="fsJ-Dh-GOf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xVS-Uh-Ukq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oHW-at-7Sd"/>
+                                <exclude reference="u92-oR-GcJ"/>
+                                <exclude reference="GaE-QU-Upo"/>
+                                <exclude reference="bfm-CT-kZb"/>
+                                <exclude reference="MfO-V2-X21"/>
+                                <exclude reference="kpd-0h-w77"/>
+                                <exclude reference="LG2-Ki-Oi8"/>
+                                <exclude reference="xVS-Uh-Ukq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="oHW-at-7Sd"/>
+                                <include reference="u92-oR-GcJ"/>
+                                <include reference="GaE-QU-Upo"/>
+                                <include reference="bfm-CT-kZb"/>
+                                <include reference="MfO-V2-X21"/>
+                                <include reference="kpd-0h-w77"/>
+                                <include reference="LG2-Ki-Oi8"/>
+                                <include reference="xVS-Uh-Ukq"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cenliusLabel" destination="ruI-hj-k4Z" id="YQm-tS-zYZ"/>
+                        <outlet property="fahrenheitLabel" destination="fsJ-Dh-GOf" id="1hK-qA-Jo1"/>
+                        <outlet property="slider" destination="ag1-j1-brW" id="pb9-qC-vGO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1616969961_53-p-stilnii-fon-57" width="300" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
